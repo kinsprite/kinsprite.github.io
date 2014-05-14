@@ -1,0 +1,39 @@
+*               text=auto
+ 
+*.txt           text
+*.sh            eol=lf
+
+*.jpeg          -text
+*.jpg           -text
+*.bmp           -text
+*.png           -text
+*.ico           -text
+
+*.doc           -text
+*.xls           -text
+*.ppt           -text
+*.vsd           -text
+
+*.docx          -text
+*.xlsx          -text
+*.pptx          -text
+*.vsdx          -text
+
+*.dot           -text
+*.xlt           -text
+*.pot           -text
+*.vss           -text
+*.vst           -text
+
+*.dotx          -text
+*.xltx          -text
+*.potx          -text
+*.vssx          -text
+*.vstx          -text
+
+*.pdf           -text
+*.xps           -text
+
+*.zip           -text
+*.rar           -text
+*.7z            -text
