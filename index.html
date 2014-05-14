@@ -1,11 +1,13 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-     <title>个人主页 - QinZhiqiang</title>
-  </head>
-  
-  <body>
-    <h1>QinZhiqiang的个人主页</h1>
-  </body>
-</html>
+---
+layout: default
+title: Zhiqiang Qin
+---
+
+<div id="home">
+  <h1>博客文章</h1>
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
