@@ -9,3 +9,4 @@ set path=%ruby_path%;%python_path%;%python_path%\Scripts;%path%;
 @echo on
 
 jekyll serve
+@set path=%path_old%

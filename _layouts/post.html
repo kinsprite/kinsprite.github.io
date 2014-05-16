@@ -2,7 +2,19 @@
 layout: default
 ---
 <h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date_to_string }}</p>
+        {% if page.date != nil or page.author != nil %}
+          <div class="meta">
+            {% if page.date != nil %}
+                <span>{{ page.date | date_to_string }}</span>
+            {% endif %}
+            {% if page.author != nil %}
+               <a href="https://github.com/{{ page.author }}" class="page-author">
+                  <img src="https://github.com/{{ page.author }}.png" class="avatar" alt="{{ page.author }}" width="24" height="24">
+                  {{ page.author }}
+                </a>
+            {% endif %}
+          </div>
+        {% endif %}
 
 <div class="post">
 {{ content }}

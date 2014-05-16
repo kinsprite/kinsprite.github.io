@@ -1,13 +1,32 @@
 ---
 layout: default
-title: Zhiqiang Qin
+title: Zhiqiang Qin 博客
 ---
 
 <div id="home">
-  <h1>博客文章</h1>
+
   <ul class="posts">
     {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+      <div>
+        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        {% if post.date != nil or post.author != nil %}
+          <div>
+            {% if post.date != nil %}
+                <span>{{ post.date | date_to_string }}</span>
+            {% endif %}
+            {% if post.author != nil %}
+               <a href="https://github.com/{{ post.author }}" class="post-author">
+                  <img src="https://github.com/{{ post.author }}.png" class="avatar" alt="{{ post.author }}" width="24" height="24">
+                  {{ post.author }}
+                </a>
+            {% endif %}
+          </div>
+        {% endif %}
+        <div>{{ post.excerpt }}</div>
+        {% if post.excerpt != post.content %}
+          <div><a href="{{ post.url }}">阅读全文...</a></div>
+        {% endif %}
+      </div>
     {% endfor %}
   </ul>
 </div>

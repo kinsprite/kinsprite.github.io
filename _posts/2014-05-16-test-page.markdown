@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "测试页面"
+date:   "2014-05-16 17:30:01 +0800"
+author: kinsprite
+categories: [test, mytest]
+---
+
+测试页面的摘要部分。
+
+<!--more-->
+
+测试页面的更多内容。
