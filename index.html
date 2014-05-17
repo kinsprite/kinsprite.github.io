@@ -1,0 +1,10 @@
+---
+layout: default
+title: Zhiqiang 博客
+---
+{% include JB/setup %}
+
+{% assign posts_list = site.posts %}  
+{% assign ov_posts_limit = site.data.ov.posts_limit %}
+{% assign ov_post_excerpt = site.data.ov.post_excerpt %}
+{% include JB/posts_overview %}

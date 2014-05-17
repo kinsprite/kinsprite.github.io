@@ -1,0 +1,39 @@
+{% comment %}<!--
+The posts_overview include is a posts overviewing helper.
+Usage:
+  1) assign the 'posts_overview' variable to a valid array of pages or posts.
+  2) include JB/posts_overview
+  example:
+  	{% assign posts_list = site.posts %}
+    {% assign ov_posts_limit = 10 %}
+    {% assign ov_post_excerpt = true %}
+  	{% include JB/posts_overview %}
+-->{% endcomment %}
+
+{% for post in posts_list limit: ov_posts_limit %}
+  <div class="row post-overview">
+    <div class="post-ov-header">
+      <h1><a href="{{ post.url }}">{{ post.title }}{% if post.tagline %} <small>{{post.tagline}}</small>{% endif %}</a></h1>
+    </div>
+    <div class="{% if ov_post_excerpt %}post-short{% else %}post-full{% endif %}">
+      <div class="col-xs-12">
+        {% if post.date %}
+          <div class="date"> 
+            <span>{{ post.date | date_to_string }}</span>
+          </div>
+        {% endif %}
+        {% if ov_post_excerpt %}
+          <div class="excerpt">{{ post.excerpt }}</div>
+          {% if post.excerpt != post.content %}
+            <div class="read-more"><a href="{{ post.url }}">{{ site.data.i18n.text.read_more }}</a></div>
+          {% endif %}
+        {% else %}
+          <div class="content">{{ post.content }}</div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endfor %}
+{% assign posts_list = nil %}
+{% assign ov_posts_limit = nil %}
+{% assign ov_post_excerpt = nil %}

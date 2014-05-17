@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "测试页面2"
+date:   "2014-05-16 20:58:01 +0800"
+author: kinsprite
+categories: [test, mytest]
+---
+
+测试页面2内容。

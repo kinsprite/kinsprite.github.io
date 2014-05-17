@@ -10,7 +10,7 @@ pygments: true
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : Zhiqiang Qin 博客
+title : Zhiqiang 博客
 tagline: 心静则明，水止乃能照物；品超斯远，云飞而不碍空。
 author :
   name : Zhiqiang Qin
@@ -129,9 +129,3 @@ JB :
   # and include your custom code. Your custom file must be defined at:
   #   ./_includes/custom/[HELPER]
   # where [HELPER] is the name of the helper you are overriding.
-  
-  # i18n
-  translation :
-    text :
-      search : '搜索'
-      submit : '提交'

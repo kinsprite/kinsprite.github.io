@@ -1,0 +1,3 @@
+## overview
+posts_limit : 10
+post_excerpt : true   # show excerpt or content
