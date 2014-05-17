@@ -3,19 +3,21 @@
 permalink: /:categories/:year/:month/:day/:title 
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
+markdown: redcarpet
 pygments: true
+# timezone: Asia/Shanghai
 
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : Jekyll Bootstrap
-tagline: Site Tagline
+title : Zhiqiang Qin 博客
+tagline: 心静则明，水止乃能照物；品超斯远，云飞而不碍空。
 author :
-  name : Name Lastname
-  email : blah@email.test
-  github : username
-  twitter : username
-  feedburner : feedname
+  name : Zhiqiang Qin
+  email : qxqs11@126.com
+  github : kinsprite
+  twitter : false
+  feedburner : false
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
@@ -25,7 +27,7 @@ author :
 # Else if you are pushing to username.github.io, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://username.github.io
+production_url : http://qinzhiqiang.cn
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
@@ -82,7 +84,7 @@ JB :
   comments :
     provider : disqus
     disqus :
-      short_name : jekyllbootstrap
+      short_name : qzq
     livefyre :
       site_id : 123
     intensedebate :
@@ -100,7 +102,7 @@ JB :
   analytics :
     provider : google 
     google : 
-        tracking_id : 'UA-123-12'
+        tracking_id : 'UA-51093416-1'
     getclicky :
       site_id : 
     mixpanel :
@@ -128,3 +130,8 @@ JB :
   #   ./_includes/custom/[HELPER]
   # where [HELPER] is the name of the helper you are overriding.
   
+  # i18n
+  translation :
+    text :
+      search : '搜索'
+      submit : '提交'
