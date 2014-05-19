@@ -1,0 +1,6 @@
+  function search()
+  {
+    var query = document.getElementById("search-text").value;
+    window.open("http://google.com/search?q=" + query
+      + "%20site:" + "{{ site.production_site }}");
+  }

@@ -1,0 +1,41 @@
+{% comment %}<!--
+The post_view.html include is a post over helper.
+Usage:
+  1) assign the 'post' variable to a page or post.
+  2) include themes/kinsprite/post_view.html
+  example:
+    {% assign post_view_excerpt = true %}
+  	{% for post in posts_list limit: 10 %}
+      {% include themes/kinsprite/post_view.html %}
+    {% endfor %}
+    {% assign post_view_excerpt = nil %}
+-->{% endcomment %}
+<div class="post-view col-xs-12">
+  <div class="post-view-header">
+    <h1><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}{% if post.tagline %} <small>{{post.tagline}}</small>{% endif %}</a></h1>
+  </div>
+  <div class="{% if post_view_excerpt %}post-excerpt{% else %}post-full{% endif %}">
+    <div>
+      {% if post.date %}
+        <div class="date"> 
+          <span>{{ post.date | date_to_string }}</span>
+        </div>
+      {% endif %}
+      {% if post_view_excerpt %}
+        <div class="excerpt">{{ post.excerpt }}</div>
+        {% if post.excerpt != post.content %}
+          <div class="read-more"><a href="{{ BASE_PATH }}{{ post.url }}">{{ site.data.i18n.text.read_more }}</a></div>
+        {% endif %}
+      {% else %}
+        <div class="content">{{ post.content }}</div>
+      {% endif %}
+      {% unless post.tags == empty %}
+        <ul class="tag_box inline">
+          <li><i class="glyphicon-tags"></i></li>
+          {% assign tags_list = post.tags %}
+          {% include JB/tags_list %}
+        </ul>
+      {% endunless %}
+    </div>
+  </div>
+</div>

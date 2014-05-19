@@ -1,0 +1,11 @@
+<script type="text/javascript">
+  var _hmt = _hmt || [];
+  _hmt.push(['_setAccount', '{{ site.JB.analytics.baidu.token }}']);
+  
+  (function() {
+    var ba = document.createElement('script'); ba.type = 'text/javascript'; ba.async = true;
+    ba.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 
+      'hm.baidu.com/h.js?{{ site.JB.analytics.baidu.token }}';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ba, s);
+  })();
+</script>

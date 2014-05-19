@@ -1,0 +1,42 @@
+---
+layout: index
+title: 'Zhiqiang 博客'
+---
+{% include JB/setup %}
+
+<div class="row post-view-list">
+  {% assign post_view_excerpt = true %}
+  {% for post in paginator.posts %}
+    {% include themes/kinsprite/post_view.html %}
+  {% endfor %}
+  {% assign post_view_excerpt = nil %}
+</div>
+<hr>
+
+{% if paginator.total_pages > 1 %}
+<ul class="pagination">
+  {% if paginator.previous_page %}
+    <li class="prev"><a href="{{ paginator.previous_page_path | prepend: BASE_PATH | replace: '//', '/' }}">&laquo; {{ site.data.i18n.text.previous_page }}</a></li>
+  {% else %}
+    <li class="prev disabled"><a>&larr; {{ site.data.i18n.text.previous_page }}</a></li>
+  {% endif %}
+  
+  {% if paginator.next_page %}
+    <li class="next"><a href="{{ BASE_PATH }}{{ paginator.next_page.url }}" title="{{ paginator.next_page.title }}">{{ site.data.i18n.text.next_page }} &raquo;</a></li>
+  {% else %}
+    <li class="next disabled"><a>{{ site.data.i18n.text.next_page }} &rarr;</a>
+  {% endif %}
+</ul>
+
+<div class="pagination">
+  {% for page in (1..paginator.total_pages) limit: 10 %}
+    {% if page == paginator.page %}
+      <span class="current disabled">{{ page }}</span>
+    {% elsif page == 1 %}
+      <span><a href="{{ '/index.html' | prepend: BASE_PATH | replace: '//', '/' }}">{{ page }}</a></span>
+    {% else %}
+      <span><a href="{{ site.paginate_path | prepend: BASE_PATH | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></span>
+    {% endif %}
+  {% endfor %}
+</div>
+{% endif %}

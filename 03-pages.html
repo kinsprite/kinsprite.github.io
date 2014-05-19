@@ -1,0 +1,14 @@
+---
+layout: page
+title: 页面 
+header: 所有页面
+group: navigation
+permalink: pages.html
+---
+{% include JB/setup %}
+
+<h2>所有页面</h2>
+<ul>
+{% assign pages_list = site.pages | sort: 'name' %}
+{% include JB/pages_list %}
+</ul>

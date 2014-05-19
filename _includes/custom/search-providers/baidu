@@ -1,0 +1,6 @@
+  function search()
+  {
+    var query = document.getElementById("search-text").value;
+    window.open("http://www.baidu.com/baidu?word=" + query
+      + "&tn=bds&cl=3&ct=2097152&si=" + "{{ site.production_site }}");
+  }
