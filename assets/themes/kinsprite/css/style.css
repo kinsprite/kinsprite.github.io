@@ -14,7 +14,7 @@
   float: right; }*/
   
 .navbar-nav li {
-    font-weight: 600;
+    font-weight: bold;
 }
 
 /* Jekyll Bootstrap Colors */
