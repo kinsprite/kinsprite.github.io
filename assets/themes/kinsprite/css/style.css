@@ -12,6 +12,10 @@
 /* Replaced with standard BS3 Navbar */
 /*.navbar .nav {
   float: right; }*/
+  
+.navbar-nav li {
+    font-weight: 600;
+}
 
 /* Jekyll Bootstrap Colors */
 h1, h2, h3, h4 {
