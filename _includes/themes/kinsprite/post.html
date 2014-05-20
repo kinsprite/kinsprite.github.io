@@ -32,13 +32,13 @@
     {% if page.previous %}
       <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&laquo; {{ site.data.i18n.text.previous_post }}</a></li>
     {% else %}
-      <li class="prev disabled"><a>&larr; {{ site.data.i18n.text.previous_post }}</a></li>
+      <li class="prev disabled"><span>&larr; {{ site.data.i18n.text.previous_post }}</span></li>
     {% endif %}
       <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">{{ site.data.i18n.text.archive }}</a></li>
     {% if page.next %}
       <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">{{ site.data.i18n.text.next_post }} &raquo;</a></li>
     {% else %}
-      <li class="next disabled"><a>{{ site.data.i18n.text.next_post }} &rarr;</a>
+      <li class="next disabled"><span>{{ site.data.i18n.text.next_post }} &rarr;</span>
     {% endif %}
     </ul>
     <hr>

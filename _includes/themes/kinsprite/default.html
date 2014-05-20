@@ -91,7 +91,7 @@
 
     <div id="footer">
       <div class="container">
-        <p>&copy; {{ site.time | date: '%Y' }} <em>{{ site.author.name }}</em>
+        <p>&copy; {{ site.time | date: '%Y' }} <a href="{{ '/' | prepend: BASE_PATH | replace: '//', '/' }}" target="_blank" title="{{ site.title }}"><em>{{ site.author.name }}</em></a>
           with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
           and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
         </p>
