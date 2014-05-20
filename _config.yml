@@ -149,4 +149,5 @@ JB :
 cdn :
   bootstrap : 'http://libs.baidu.com/bootstrap/3.0.3'
   jquery : 'http://libs.baidu.com/jquery/1.10.2'
-  jquery_ui : 'http://libs.baidu.com/jqueryui/1.10.2'
+  jquery_ui_js : 'http://libs.baidu.com/jqueryui/1.10.2'
+  jquery_ui_css : 'http://libs.baidu.com/jqueryui/1.10.2/themes/smoothness'
