@@ -2,7 +2,7 @@
 text :
   search : '搜索'
   submit : '提交'
-  read_more : '阅读全文...'
+  read_more : '阅读全文'
   archive : '文章'
   previous_page : '上一页'
   next_page : '下一页'

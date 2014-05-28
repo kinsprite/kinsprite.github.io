@@ -24,7 +24,7 @@ Usage:
       {% if post_view_excerpt %}
         <div class="excerpt">{{ post.excerpt }}</div>
         {% if post.excerpt != post.content %}
-          <div class="read-more"><a href="{{ BASE_PATH }}{{ post.url }}">{{ site.data.i18n.text.read_more }}</a></div>
+          <div class="read-more"><a href="{{ BASE_PATH }}{{ post.url }}">{{ site.data.i18n.text.read_more }} &rarr;</a></div>
         {% endif %}
       {% else %}
         <div class="content">{{ post.content }}</div>
