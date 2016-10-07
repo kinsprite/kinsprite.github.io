@@ -1,10 +1,15 @@
 # This is the default format. 
 # For more see: http://jekyllrb.com/docs/permalinks/
-permalink: /:categories/:year/:month/:day/:title 
+permalink: pretty
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "History.markdown", "CNAME", "run-server.bat"]
-markdown: redcarpet
-pygments: true
+
+# Plugins
+gems: [ jekyll-paginate ]
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
 timezone: Asia/Shanghai
 paginate: 10
 paginate_path: "blog/page:num"
